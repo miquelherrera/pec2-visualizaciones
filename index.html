@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEC 2 - Visualización de Datos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        .visualizaciones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .viz-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .viz-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+        }
+        
+        .viz-card h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        
+        .viz-card p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .viz-image {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        
+        .viz-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .viz-link:hover {
+            background: #764ba2;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Técnicas de visualización de datos</h1>
+        <p class="subtitle">PEC 2</p>
+        
+        <div class="visualizaciones">
+            <!-- TÉCNICA 1: Pirámide -->
+            <div class="viz-card">
+                <h2>🔺 Pirámide poblacional</h2>
+                <p><strong>Distribución de uso diario de redes sociales por género</strong></p>
+                <p>Compara el uso de redes sociales en intervalos de 0,5 horas entre hombres y mujeres estudiantes. La simetría muestra patrones de comportamiento digital por género.</p>
+                <img src="piramide.png" alt="Pirámide" class="viz-image">
+                <a href="piramide.png" class="viz-link" target="_blank">Ver imagen completa</a>
+            </div>
+            
+            <!-- TÉCNICA 2: Radar -->
+            <div class="viz-card">
+                <h2>Gráfico de radar</h2>
+                <p><strong>Perfiles multidimensionales por nivel académico</strong></p>
+                <p>Compara 5 dimensiones (uso de redes sociales, sueño, salud mental, conflictos, adicción a las redes sociales) entre estudiantes de educación secundaria, grado y posgrado.</p>
+                <iframe src="radar.html" style="width: 100%; height: 400px; border: none; border-radius: 6px;"></iframe>
+                <a href="radar.html" class="viz-link" target="_blank">Ver interactivo</a>
+            </div>
+            
+            <!-- TÉCNICA 3: Ridgeline -->
+            <div class="viz-card">
+                <h2>Ridgeline chart</h2>
+                <p><strong>Distribución de puntuación de adicción por plataforma</strong></p>
+                <p>Visualiza cómo la puntuación de adicción se distribuye de manera diferente según la red social más usada (Instagram, TikTok, Facebook, etc.)</p>
+                <img src="ridgeline.png" alt="Ridgeline" class="viz-image">
+                <a href="ridgeline.png" class="viz-link" target="_blank">Ver imagen completa</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Trabajo presentado para PEC 2: Técnicas de visualización de datos</p>
+        </div>
+    </div>
+</body>
+</html>
